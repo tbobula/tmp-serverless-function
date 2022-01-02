@@ -2,7 +2,10 @@ const result = document.querySelector(".result");
 
 const fetchData = async () => {
   try {
-    const { data } = await axios.get("/api/2_basic_api");
+    // const { data } = await axios.get("/api/2_basic_api");
+    const { data } = await axios.get(
+      "https://tb-serverles-functions.netlify.app/api/2_basic_api"
+    );
 
     const products = data
       .map((item) => {
